@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahibzada Issar Ali - Web Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .typing-text::after {
+            content: "|";
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #667eea;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #667eea;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-purple-600">Sahibzada <span class="text-gray-800">Issar Ali</span></div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-purple-600">Home</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-purple-600">Experience</a>
+                    <a href="#education" class="nav-link text-gray-700 hover:text-purple-600">Education</a>
+                    <a href="#certification" class="nav-link text-gray-700 hover:text-purple-600">Certification</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-purple-600">Skills</a>
+                    <a href="#hobbies" class="nav-link text-gray-700 hover:text-purple-600">Hobbies & Languages</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#home" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Home</a>
+                <a href="#experience" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Experience</a>
+                <a href="#education" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Education</a>
+                <a href="#certification" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Certification</a>
+                <a href="#skills" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Skills</a>
+                <a href="#hobbies" class="block py-2 px-4 text-gray-700 hover:text-purple-600 hover:bg-gray-100">Hobbies & Languages</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient text-white pt-24 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Sahibzada Issar Ali</h1>
+                    <div class="text-xl md:text-2xl font-light mb-6">
+                        <span>I am a </span>
+                        <span id="typing-text" class="typing-text font-medium"></span>
+                    </div>
+                    <p class="text-gray-200 mb-8">A skilled Web Developer with a Bachelor of Science in Computer Science. Proficient in creating visually rich, appealing user interfaces. Passionate about leveraging advanced Web Development techniques, thriving in delivering creative, efficient, and scalable digital solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:sahibzadaissarali@gmail.com" class="bg-white text-purple-600 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition duration-300 flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                        <a href="https://github.com/issarali538" target="_blank" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-purple-600 transition duration-300 flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-2/5">
+                    <img src="/api/placeholder/400/400" alt="Web Developer Illustration" class="rounded-lg shadow-2xl"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 section-heading">Professional Experience</h2>
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <div class="w-full md:w-1/2 md:pr-8 mb-10 md:mb-0">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-laptop-code text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800">Web Developer</h3>
+                                <p class="text-gray-600">Dynamowebs | 2.5 years</p>
+                            </div>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Converted Figma or Adobe Photoshop designs into web application templates</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Optimized web pages for faster loading and wrote well-documented code</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Added new features and modules to existing web applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Enhanced front-end visuals and graphics for better user engagement</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Implemented payment gateways like Stripe with Laravel and PHP</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Created Twilio API SMS campaigns for marketing CRM solutions</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 card">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-database text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800">Data Processing Assistant</h3>
+                                <p class="text-gray-600">Ministry of Hajj | 1 year</p>
+                            </div>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Managed and analyzed large datasets to ensure efficient, streamlined reporting</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Identified trends and insights within data, ensuring data integrity and accuracy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Applied complex queries for data analysis, optimizing reporting quality</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Performed extensive data cleaning and transformation using MS Excel and SQL</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Designed dashboards in MS Excel and PowerBI for better data storytelling</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 section-heading">Education</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto card">
+                <div class="flex items-center mb-6">
+                    <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">BS Computer Science</h3>
+                        <p class="text-gray-600">University of Science and Technology, Bannu | 4 years</p>
+                    </div>
+                </div>
+                <div class="ml-16">
+                    <h4 class="font-medium text-gray-800 mb-2">Focused Studies:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Computer Hardware</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Software Engineering</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Mathematics</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Web Technologies</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Database</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">AI</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Statistics</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">English</span>
+                        <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm">Islamic Studies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 section-heading">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card">
+                    <div class="bg-gradient h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-laravel text-purple-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Laravel</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2">The Data City</p>
+                        <ul class="text-gray-700 space-y-2 mt-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>MVC framework pattern for scalable applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Developing with PHP, Laravel and MySQL</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Laravel composer for packages and libraries</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                <span>Creating and implementing APIs with Laravel</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card">
+                    <div class="bg-gradient h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-code text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Front End Development</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2">Pakistan Freelancing Program</p>
+                        <ul class="text-gray-700 space-y-2 mt-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Web technologies and business impact</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Creating appealing templates with ReactJS</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Mobile-first approach to front-end design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>Adding animations using CSS and JS libraries</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card">
+                    <div class="bg-gradient h-2"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-database text-green-600 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">SQL</h3>
+                        </div>
+                        <p class="text-gray-600 mb-2">Data City</p>
+                        <ul class="text-gray-700 space-y-2 mt-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Efficient SQL queries for proper data retrieval</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Advanced concepts: JOINS, Sub-Queries, Views</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Database design and data modeling</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Creating databases with proper constraints</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 section-heading">Skills</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">HTML</span>
+                    <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">CSS</span>
+                    <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">BOOTSTRAP</span>
+                    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">JavaScript</span>
+                    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">jQuery</span>
+                    <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">ReactJs</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">PHP</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Laravel</span>
+                    <span class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">MySQL</span>
+                    <span class="bg-green-100 text-green-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">SQL</span>
+                    <span class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">Excel</span>
+                    <span class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">PowerBI</span>
+                    <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">VSCode</span>
+                    <span class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium skill-tag">GitHub</span>
+                </div>
+                
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Front-End Development</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">HTML/CSS</span>
+                                    <span class="text-gray-600">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">JavaScript</span>
+                                    <span class="text-gray-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Bootstrap</span>
+                                    <span class="text-gray-600">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">ReactJS</span>
+                                    <span class="text-gray-600">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Back-End Development</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">PHP</span>
+                                    <span class="text-gray-600">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Laravel</span>
+                                    <span class="text-gray-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">MySQL</span>
+                                    <span class="text-gray-600">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">API Development</span>
+                                    <span class="text-gray-600">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies & Languages Section -->
+    <section id="hobbies" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 section-heading">Hobbies & Languages</h2>
+            <div class="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex-1 card">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-heart text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Hobbies</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4 ml-16">
+                        <div class="flex flex-col items-center">
+                            <div class="bg-purple-50 p-4 rounded-full mb-2">
+                                <i class="fas fa-futbol text-purple-600 text-2xl"></i>
+                            </div>
+                            <span class="text-gray-700">Soccer</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-purple-50 p-4 rounded-full mb-2">
+                                <i class="fas fa-book-open text-purple-600 text-2xl"></i>
+                            </div>
+                            <span class="text-gray-700">Reading Books</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="bg-purple-50 p-4 rounded-full mb-2">
+                                <i class="fas fa-plane-departure text-purple-600 text-2xl"></i>
+                            </div>
+                            <span class="text-gray-700">Travelling</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 flex-1 card">
+                    <div class="flex items-center mb-6">
+                        <div class="
